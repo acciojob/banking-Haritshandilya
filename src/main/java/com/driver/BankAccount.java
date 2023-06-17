@@ -19,6 +19,14 @@ public class BankAccount {
     private double balance;
     private double minBalance;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public BankAccount(String name, double balance, double minBalance) {
         this.name = name;
         this.balance = balance;
