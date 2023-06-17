@@ -3,11 +3,26 @@ package com.driver;
 public class BankAccount {
 
     private String name;
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public double getMinBalance() {
+        return minBalance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     private double balance;
     private double minBalance;
 
     public BankAccount(String name, double balance, double minBalance) {
-
+        this.name = name;
+        this.balance = balance;
+        this.minBalance = minBalance;
     }
 
     public String generateAccountNumber(int digits, int sum) throws Exception{
@@ -20,12 +35,15 @@ public class BankAccount {
 
     public void deposit(double amount) {
         //add amount to balance
+        this.balance+=amount;
 
     }
 
     public void withdraw(double amount) throws Exception {
         // Remember to throw "Insufficient Balance" exception, if the remaining amount would be less than minimum balance
-
+        double remainingAmount = this.balance-amount;
+        if(remainingAmount<minBalance) throw new Exception("Insufficient Balance");
+        this.balance = remainingAmount;
     }
 
 }
