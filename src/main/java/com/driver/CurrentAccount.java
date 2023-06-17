@@ -3,6 +3,10 @@ package com.driver;
 import java.util.PriorityQueue;
 
 public class CurrentAccount extends BankAccount{
+    public String getTradeLicenseId() {
+        return tradeLicenseId;
+    }
+
     String tradeLicenseId; //consists of Uppercase English characters only
 
     public CurrentAccount(String name, double balance, String tradeLicenseId) throws Exception {

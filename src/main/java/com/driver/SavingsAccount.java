@@ -1,6 +1,14 @@
 package com.driver;
 
 public class SavingsAccount extends BankAccount{
+    public double getRate() {
+        return rate;
+    }
+
+    public double getMaxWithdrawalLimit() {
+        return maxWithdrawalLimit;
+    }
+
     double rate;
     double maxWithdrawalLimit;
 
