@@ -2,6 +2,10 @@ package com.driver;
 
 public class StudentAccount extends BankAccount{
 
+    public String getInstitutionName() {
+        return institutionName;
+    }
+
     String  institutionName;
 
     public StudentAccount(String name, double balance, String  institutionName) {
